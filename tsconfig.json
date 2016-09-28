@@ -16,11 +16,8 @@
     "target": "es5",
     "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules",
-    "release",
-    "typings/index",
-    "typings/index.d.ts"
+  "files": [
+    "index.ts"
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true
