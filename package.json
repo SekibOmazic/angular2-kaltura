@@ -88,6 +88,8 @@
     "prebuild": "npm run clean:pre",
     "postbuild": "npm run clean:post && npm run copy",
     "build": "npm run bundle:main",
-    "version": "npm run changelog && git add CHANGELOG.md"
+    "version": "npm run changelog && git add CHANGELOG.md",
+    "prerelease": "npm version patch",
+    "release": "npm publish release/"
   }
 }
