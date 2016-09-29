@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { KalturaPlayerComponent } from './kaltura/kaltura';
+import { KalturaPlayerComponent } from './kaltura/kaltura-player.component';
 
 @NgModule({
-  imports: [ CommonModule ],
   declarations: [ KalturaPlayerComponent ],
   exports: [ KalturaPlayerComponent ]
 })

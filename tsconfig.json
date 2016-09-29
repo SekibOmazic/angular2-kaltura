@@ -5,19 +5,18 @@
     "stripInternal": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": false,
     "outDir": "./release",
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
-    "lib": ["es2015", "dom"],
     "target": "es5",
     "skipLibCheck": true
   },
   "files": [
-    "index.ts"
+    "src/index.ts"
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true

@@ -1,5 +1,5 @@
 export default {
-    entry: './release/index.js',
+    entry: './release/src/index.js',
     dest: './release/bundles/Kaltura.umd.js',
     format: 'umd',
     moduleName: 'Kaltura',
