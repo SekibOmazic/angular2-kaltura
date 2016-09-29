@@ -14,22 +14,55 @@ npm install angular2-kaltura --save
 
 ### How to use
 
-Just add following your component template:
+Import `KalturaModule` and define it as one of the imports of your application module:
 
-```html
-<kaltura-player [config]="kalturaConfig" [videoId]="videoId"></kaltura-player>
+```js
+import { NgModule } from '@angular/core';
+import { KalturaModule } from 'angular2-kaltura';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+    imports: [
+        KalturaModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    bootstrap: [
+        AppComponent
+    ]
+})
+export class AppModule { }
 ```
 
-`videoId` is the entry_id from Kaltura and `config` is a `KalturaConfig` object (yes I like Typescript).
+Add the following HTML to the component template in which you want to use the select component:
 
-and in your component you'll need:
+```html
+<kaltura-player [config]="kalturaConfig" 
+                [videoId]="videoId" 
+                (ready)="doSomethingOnReady(targetId)">
+</kaltura-player>
+```
+
+`videoId` is the entry_id from Kaltura 
+`config` is a `KalturaConfig` object (yes I like Typescript).
+`(ready)` is an event which is emitted when the Kaltura Player is ready. `targetId` is the DOM id of the element that wrapps the player.
+
+
+Within the component class you have to set `KalturaConfig` object.
 
 ```js
 private kalturaConfig: KalturaConfig;
 ...
 
 this.kalturaConfig = new KalturaConfig('partner_id', 'uiconfid');
+```
 
+
+To customize the player you can pass the flashvars object to `KalturaConfig` like this:
+
+```js
 // flashvars is optional and allows you to set runtime uiVar configuration
 this.kalturaConfig.flashvars = {
   autoPlay: false,
