@@ -1,10 +1,9 @@
 export default {
-    entry: './release/src/index.js',
+    entry: './release/index.js',
     dest: './release/bundles/Kaltura.umd.js',
     format: 'umd',
     moduleName: 'Kaltura',
     globals: {
-        '@angular/core': 'ng.core',
-        '@angular/common': 'ng.common'
+        '@angular/core': 'ng.core'
     }
 }
