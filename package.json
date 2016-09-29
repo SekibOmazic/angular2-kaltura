@@ -1,6 +1,6 @@
 {
   "name": "angular2-kaltura",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simple wrapper around Kaltura player",
   "repository": {
     "type": "git",
