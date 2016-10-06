@@ -41,12 +41,14 @@ Add the following HTML to the component template in which you want to use the se
 ```html
 <kaltura-player [config]="kalturaConfig" 
                 [videoId]="videoId" 
+                [secure]="true"
                 (ready)="doSomethingOnReady(targetId)">
 </kaltura-player>
 ```
 
 `videoId` is the entry_id from Kaltura 
 `config` is a `KalturaConfig` object (yes I like Typescript).
+`secure` is a boolean flag. Set to `true` if you want to load Kaltura Player Javascript via https. Default `false`
 `(ready)` is an event which is emitted when the Kaltura Player is ready. `targetId` is the DOM id of the element that wrapps the player.
 
 
